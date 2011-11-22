@@ -1,0 +1,226 @@
+% Isto é um comentário que não será processado. Ele serve apenas
+% para fazer anotações não incluídas no resultado final. Atenção
+% ao símbolo do comentário: porcentagem (%).
+%a  primeira linha mostra qual vai zer a formatação do documento
+% tudo esta entre [] é opcional e o que está entre {} é obrigatório
+% article especifica que o documento levará um  formato de artigo (que obvio)
+\documentclass[10pt,a4paper]{article}
+% todos os comandos \userpackage são pacotes que estão sendo usados 
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%muda  nome do comando \backslash para \CBarra
+\newcommand{\CBarra}{$\backslash$}
+\newcommand{\circunflexo}{\textasciicircum}
+%Aqui definiremos o que vai acompanhar o titulo, mas atenção
+% apenas daremos as informações, o titulo na verdade é uma combinação de 
+% informações, sendo assim,  quando termos o comando \maketitle ele mostará o titulo com as informações dadas
+% se não dermos o comando não irá mostar titulo algum.
+%titulo do documnento
+\title{Expressões Regulares } 
+\date{}
+%marca o inicio do documento
+\begin{document}
+%monta o titulo do documento
+%ATENÇÃO para montar o titulo tem que dar esse comnado \maketitle
+\maketitle
+%INICIA O CABEÇALHO DO DOCUMENTO
+\begin{center}
+%AUTORES DO DOCUMENTO E INFORMAÇÕES ADICIONAIS
+\author 
+{Felipe S. Oliveira Barros; Felipe dos S. Pinheiro; Luciano P. Soares.\\
+Centro Universitário da Cidade do Rio de Janeiro, Escola de Ciências Exatas e Tecnologia, NUPAC - Núcleo de Projetos e Pesquisa em Aplicações Computacionais,
+Metrô-Carioca (Estação) - Av. Rio Branco e Largo da Carioca s/n}
+\end{center}
+\begin{center}
+Email: \{felipebarros.ti, felipe0pinheiro, lpsoares\}@gmail.com
+\end{center} 
+%AQUI ENTRA O NOSSO RESUMO
+\begin{abstract}
+Na área de Ciência da Computação expressão regular tem sido uma técnica eficiente para identificar caracteres particulares ou palavras e até mesmo um subgrupo de caracteres. Nem sempre de compreensão fácil, as expressões regulares são uma forte ferramenta para o profissional que as manipulam podendo reduzir linhas de códigos e reduzir o tempo gasto no desenvolvimento. Expressões regulares são escritas numa linguagem formal sendo interpretada por um processador de expressão regular, este vai analisar o texto e identificar as partes que casam com a expressão fornecida. O objetivo deste artigo é propõe uma ferramenta para o desenvolvimento de um sistema que constrói uma expressão regular básica para uma pessoa que não tenha intimidade ou desconheça esta técnica.
+\end{abstract}
+%AQUI ENTRA O NOSSO RESUMO EM INGLÊS
+\begin{center}
+\bf{Abstract:}
+\end{center}
+\begin{center}
+TEXTO EM INGLES DO AZULAY....
+\end{center}
+%INICIO DA SEÇÃO 1 - Introdução
+\section{Introdução}
+\paragraph*{} A história das expressões regulares (também conhecidas como ReGex ou ER) originou-se das ideias do matemático Stephen Cole Kleene,  o responsável por integrar as expressões regulares e a teoria da computação fazendo uso de autômato finitos.
+\paragraph*{} Não existe uma definição formal sobre o que seria uma expressão regular, tão pouco um padrão de texto que pode ser qualificado ou não como expressão regular.
+\paragraph*{}
+ As expressões regulares ajudam a reduzir a um valor mínimo as linhas de códigos. Atualmente são usadas para buscar ou substituir, dentro de uma string, uma cadeia de caracteres especifica, mas também pode ser utilizado para buscar e validar data, horário, número IP, endereço de e-mail, etc [1] sendo usados não apenas por programadores, mas também por qualquer profissional que trabalhe diretamente com textos. Atualmente o numero de ferramentas que possibilitam o uso de expressões regulares é cada fez maior entre as ferramentas mais conhecidas podemos citar BrOffice, NotePad++, GoogleDocs , Ed, vi e vim.
+\paragraph*{}
+O objetivo deste artigo é mostrar a elaboração de um sistema, na linguagem PHP, que auxilie na criação de ER para iniciantes e pessoas que não conhecem o assunto mas desejam otimizar seu trabalho. A seção 2 descreve os conhecimentos utilizados para a criação de uma ER utilizando exemplos simples apenas para entendimento de uma expressão regular, tratasse de um assunto extenso mais extremamente necessário para a elaboração do sistema, que será a base de conhecimento utilizado na criação do software. A seção 3 descreve a elaboração do RegEx Build Assistent
+%INICIO DO ITEM 2 - Conceitos báscicos
+\section{Conceitos básicos}
+\paragraph*{}
+Na informática, o tempo que se leva para processar uma informação é muito valioso e as expressões regulares nos possibilitam resultados rápidos e precisos. Podemos usar as expressões regulares para procurar textos específicos, partes de textos, textos no inicio ou no fim de uma linha ou procurar textos com uma seqüência de especifica de caractere.
+\paragraph*{}
+Ao utilizarmos uma ER procuramos por um padrão que case com o padrão especificado. O termo casar dentro de ER quer dizer combinar, e trata-se da idéia central das ER, pois sempre estamos procurando por uma string que case com as informações fornecidas.
+\paragraph*{}
+Para fazer uso das ER utilizamos uma combinação de símbolos o qual chamamos de metacaracteres. Cada metacaracter tem a sua função específica no momento de casar uma ER. Os metacaracteres, de acordo com a função, os que estudaremos estão divididos em:
+\begin{itemize}
+\item 	Metacaracter tipo Representante;
+\item 	Metacaracter tipo Quantificador; e
+\item 	Metacaracter tipo Ancora.
+\end{itemize}
+Existem outros tipos de metacaracteres, os estendido, mas somente esses três tipos de metacaracteres são suficientes para escrevermos uma expressão regular básica e é suficiente para a implementação do software. As sintaxes dos metacacteres também podem variar de um programa para o outro.
+\subsection{Metacaracter tipo Representante}
+\paragraph*{}
+O metacaracter do tipo Representante representa um ou mais caractere, contudo representam apenas uma posição de caractere.
+\subsubsection{O metacaracter ponto (.)}
+\paragraph*{}
+O metacaracter ponto (.), representa um único caractere, podendo casar com qualquer numero ou letra, inclusive o próprio ponto, na posição na qual ele foi colocado.\\
+Exemplo:\\
+Procurar em texto qualquer caracter que esteja entre as duplas.\newline
+Solução: "."\newline
+Procurar em um texo qualquer caracter entre aspas simples.\newline
+Solução: '.'\newline
+\\
+\subsubsection{O metacaracter lista ([])}
+\paragraph*{}
+O metacaracter lista ([]), representa uma lista de argumentos que são permitidos no momento da junção, ou seja, a string que está sendo procurada somente poderá conter os argumentos que estiverem dentro dos colchetes. Ela torna-se mais eficiente que o ponto, pois ela não aceita qualquer argumento, somente os especificados dentro dos colchetes.
+Exemplos: 
+\paragraph*{}
+Podemos utilizar esse recurso para encontrar palavras com uma possível grafia errada. Na ER n[ãa]o procura pela string não ou nao. 
+Conseguimos inclusive procurar caracteres escritos maiúsculos e minúsculos, na ER [Nn]ão podemos encontrar as strings Não e não.
+\paragraph*{}
+Se necessitarmos procurar um valor numérico entre 1 e 9 o correto é usar a ER [1-9] para representar o intervalo numérico pois e bem mais cômodo digitar [1-9] do que [123456789]. Podemos representar o intervalo do alfabeto somente maiúsculo [A-Z] ou somente minúsculo [a-z] isso não inclui as vogais acentuadas, Ç e o ç. Se eu quiser uma lista com letras maiúsculas, minúsculas e números uma das maneiras é usar a ER [A-Za-z0-9].
+\paragraph*{}
+Vale esclarecer que tudo o que estiver dentro dos colchetes será exatamente o que estiver dentro dos colchetes exceto o "-" que irá representar o intervalo, quando estiver entre dois caracteres. Dessa maneira a ER [.] vai representar apenas um ponto e não vai representar uma lista de qualquer coisa (existe realmente uma maneira de representar isso que será visto mais adiante). Para representar o "-" devemos colocá-lo como ultimo item da lista ou seja fora do seu lugar padrão.
+\paragraph*{}
+Nosso idioma necessita de caracteres acentuados em muitas palavras por isso fazemos uso de caracteres especiais chamados de caracteres POSIX. Na lista [A-Za-z] não estão inclusos os caracteres acentuados para isso utilizamos a classe [:upper:] (os parênteses fazem parte da classe), que inclui os caracteres acentuados bem como o Ç e o ç , nessa situação somente os maiúsculos segue uma tabela que mostra a classe POSIX uma lista equivalente e o seu significado. \newline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%CENTRALIZA E DEPOIS INICIA A TABELA%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin {center}
+\begin{tabular}{|l|r|c|} \hline 
+classe POSIX & SIMILAR & SIGNIFICA \\ \hline 
+[:upper:] & [A-Z] & letras maiúsculas \\ \hline
+[:lower:] & [a-z] & letras minúsculas \\ \hline
+[:alpha:] & [A-Za-z] & maiúsculas/minúsculas \\ \hline
+[:alnum:] & [A-Za-z0-9] & letras e números \\ \hline
+[:digit:] & [0-9] & números \\ \hline
+[:xdigit:] & [0-9A-a-f] & números hexadecimais \\ \hline
+[:punct:] & [.,!?:...] & sinais de pontuação \\ \hline
+[:blank:] & [\CBarra t] & espaço e TAB \\ \hline
+[:space:] & [\CBarra t, \CBarra n, \CBarra r, \CBarra f, \CBarra v] & caracteres brancos \\ \hline
+[:cntrl:] & - & caracteres de controle \\ \hline
+[:graph:] & [\textasciicircum \CBarra t,\CBarra n,\CBarra r, \CBarra f, \CBarra v] & caracteres imprimíveis \\ \hline
+[:print:] & [\textasciicircum ,\CBarra t,\CBarra n, \CBarra r,\CBarra f, \CBarra v] & imprimíveis e o espaço \\ \hline
+\end{tabular} \\ 
+Figura 1 - Tabela de classes PÒSIX
+\end {center}
+%termino da tabela
+\subsubsection{O metacaracter lista negada ([\textasciicircum ...])}
+\paragraph*{}
+O metacaracter lista negada ([\circunflexo ...]) possui a mesma sintaxe da lista, aceita intervalos literários, numéricos e classes Posix, mas o seu significado é inverso. Quando usamos a lista negada queremos dizer que está fora da lista é aceito e o que está dentro não, ou seja, na ER [\circunflexo 0-9] seria aceito qualquer caractere exceto número, mas sempre haverá um retorno. Podemos também excluir o alfabeto minúsculo ou maiúsculo com as ER's [\circunflexo a-z] e [\circunflexo A-Z] respectivamente ou usar as classes POSIX's  [\circunflexo[:lower:] ]e [\circunflexo[:upper:]] .
+\subsection{ Metacaracteres Quantificadores}
+\paragraph*{}
+Os metacaracteres do tipo quantificador dizem quantas vezes um determinado caractere ou matacaracter pode aparecer na string. Esse tipo de metacaracter é dito gulosos, pois se for usado permitindo uma repetição, ele tentará usar o numero máximo de repetições possíveis. 
+\subsubsection{O Metacaracter Opcional ( ?)}
+\paragraph*{}
+Muito útil para procurar palavras no singular e no plural, o metacaracter opcional (?) é usado quando queremos a ocorrência de 0 ou 1 caractere, somente para o caractere marcado e não para a palvra toda.Podemos, com os conceitos já vistos, implementar uma lista opcional como segue abaixo.
+\begin{itemize}
+\item festas? retorna festa ou festas pois o "s" foi marcado como opcional.
+\item 1581?8 retorna 15818 ou 1588 pois o "1" foi marcado como opcional.
+\item fala[r!]? retona falar, fala! e fala.
+\end{itemize}
+\subsubsection{O Metacaracter Asterisco (*)}
+\paragraph*{}
+O metacaracter asterisco permite o caractere aparecer nenhuma vez ou em uma quantidade infinita de vêzes.\\
+Exemplos:
+\begin{itemize}
+\item 6*0 retorna 0, 60, 660, 6660, 66660, ..., 66666666666666660,...
+\item b[ip]* retorna b, bi, bii, bip, biipp, bpi, bppii............
+\end{itemize}
+Podemos utilizar a combinação do . e o * obtendo dessa maneira a ER .* que irá retornar qualquer coisa em qualquer quantidade.
+\subsubsection{Metacaracter Mais (+)}
+\paragraph*{}
+Semelhante ao asterisco o mais (+)  diferencia-se em um único ponto, o caracter deve aparecer pelo menos uma vez, no asterisco ele não precisava aparecer, útil quando queremos no mínimo uma aparição. Usando os mesmos exemplos do metacaracter asterisco podemos perceber que a string 0 sozinha não é retornada e que b sozinho também não:
+\begin{itemize}
+\item 6+0 retorna 60, 660, 666066660,......, 
+\item b[ip]+ retorna bip, biip, bipp, biiip....
+\end{itemize}
+\subsubsection {O Metacaracter chaves (\{\})}
+\paragraph*{}
+O metacaractere chaves ( \{\} ) é usado para especificar quantas repetições de cada caractere queremos ter. Se escrevermos \{a,b\}  queremos dizer algo de a até b\\
+Exemplo:
+\begin{itemize}
+\item \{1,9\} retorna 9,  99, 999, 9999, 99999,... e 999999999.
+\end{itemize}
+Partindo dessa afirmação podemos perceber que é possível uma substituição da combinação de chaves pelos metacaracteres asterisco, opcional e mais.
+\subsection{Metacaracteres Âncora}
+\paragraph*{}
+Esse tipo de metacaracter não faz junção de outro caractere ou define uma quantidade, ele marca uma posição especifica na linha. Por causa da função que exerce, o metacaracter não pode ser quantificado, ou seja, os metacaracteres asterisco, mais e opcional não exercem influência sobre estes.
+\subsubsection{O metacaracter Circunflexo (\circunflexo)}
+\paragraph*{}
+Indica que estamos procurando por algo no começo da  linha.\\
+É possível combinar a lista negada com o circunflexo.
+Exemplo:
+\begin{itemize}
+\item \circunflexo[0-9] indica que estamos procurando linhas que começam com números.\\
+\item \circunflexo [\circunflexo a-z] indica as linhas que não começam com letra minúscula.
+\end{itemize}
+\subsubsection{O Metacaracter Cifrão (\$)}
+\paragraph*{}
+O metacaracter cifrão é usado da mesma forma que o circunflexo, mas o cifrão indica o fim de uma linha.\\
+Exemplo
+\begin{itemize}
+\item [0-9]\$ indica uma linha que termina com números.
+\item \circunflexo \$ indica  uma linha vazia
+\item ..... \$ indica uma linha que termine com 5 caracteres
+\item \circunflexo.{10,50}\$ indica linhas que tenham entre 10 e 50 caracteres.
+\end{itemize}
+\subsubsection{O metacaracter borda ( \CBarra b )}
+\paragraph*{}
+O metacaracter borda (\CBarra b ) marca o inicio onde a palavra inicia ou onde ela termina, ou ainda os dois simultaneamente, útil para encontrar palavras exatas e não parciais. A seguir um exemplo do comportamento da ER com a palavra dia [1].
+\begin{itemize}
+\item dia retorna dia, diafragma, radial, melodia, bom-dia!
+\item \CBarra bdia retorna dia, diafragma.
+\item dia\CBarra b retorna dia, melodia, bom-dia!
+\item \CBarra bdia\CBarra b retorna dia.
+\end{itemize}
+\subsection{Metaceracteres Extendidos.}
+\paragraph*{}
+Existem metacarecteres que não possuem uma especificação relacionada com os anteriores por isso são denominados metacaracteres extendidos[1] e são amplamente usados para facilitar escrita de uma ER.
+\subsubsection{O Metacaracter Escape (\CBarra )}
+\paragraph*{}
+Se quisermos representar um matacaracter na forma literal, podemos faze-lo através de uma lista. No entanto a lista é mais adeguado para representar um conjunto de caracteres. Nesse caso a solução mais viável seria o uso do metacaracter escape.\\
+Exemplo: Representar atraves de uma ER um numero de CPF no formato xxx.xxx.xxx-xx
+\begin{itemize}
+\item
+[0-9]\{1,3\}\CBarra.[0-9]\{1,3\}\CBarra.[0-9]\{1,3\}-[0-9]\{1,2\}
+\end{itemize}
+\subsubsection{O Metacaracter grupo "()"}
+\paragraph*{}
+O metacaracter grupo "()" ´é muito utilizado para agrupar outros metacaractes, caracteres e subgrupos tornando seu uso essecial para simplificar uma expressão regular. Todo o conteudo que estiver entre parenteses será identificado como um grupo, e este deverá casar dentro da regex.\newline
+Exemplos:\newline
+(www\.)?google.com(\.br) retorna www.google.com.br, www.google.com, google.com e google.com.br
+\subsubsection{O Metacaracter OU (|)}
+\paragraph*{}
+O metacaracter ou (|) funciona como um operador booleano, possibilitando alternativas diversas para a expressão, ao usá-lo podemos casar todas estas possibilidades, usando o metacaracter "()" tornamos o ou" (|) mais poderoso.\newline
+Exemplo:\newline
+Encontrar endereços de internet que sejam https:// ou estilo ftp:// [1].\newline
+(http://|ftp://)
+\subsection{Precedência entre metacaracteres}
+\paragraph{}
+Os metacarcteres possuem uma precedência para melhor entendermos e determinamos uma RegEx.A seguir uma tabela que mostra a precedência entre caracteres baseada no livro de[1].
+\begin {center}
+\begin{tabular}{|l|r|c|} \hline 
+Tipo de meta & Exemplo & Procedência\\ \hline
+quantificador & ab+ & maior\\ \hline
+concatenação & ab & média\\ \hline
+ou & ab|c & menor\\ \hline
+\end{tabular} \\ 
+Figura 2 - Tabela de procedência entre os metacaracteres.
+\end {center}
+Desda forma uma RegEx 12* não seria uma RegEx 1 com 2 em qualquer quantidade e sim 1 seguido de 2 em qualquer quantidade.
+\begin{thebibliography}{}
+[1]JARGAS, Aurélio Marinho. Expressões Regulares - Uma abordagem divertida. 3 ed. Novatec, 2009.\\
+
+\end{thebibliography}
+\end{document}
