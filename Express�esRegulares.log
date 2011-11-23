@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.10.22)  22 NOV 2011 16:51
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.10.22)  23 NOV 2011 04:04
 entering extended mode
 **expressõesregulares.tex
 (C:\Users\Felipe\EPA3\expressõesregulares.tex
@@ -66,136 +66,143 @@ File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
 (C:\Users\Felipe\EPA3\expressõesregulares.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 26.
+(Font)              <12> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 26.
+(Font)              <8> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 26.
+(Font)              <6> on input line 28.
 
 
 LaTeX Warning: No \author given.
 
 [1
 
-{C:/Users/Felipe/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
+{C:/Users/Felipe/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 105.
+
 
 ("C:\Program Files\MKTex\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--83
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 120--125
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 95--99
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 100.
+(Font)              <7> on input line 139.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 100.
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-
- []
-
+(Font)              <5> on input line 139.
 [5]
-Overfull \hbox (6.3031pt too wide) in paragraph at lines 200--203
-\T1/cmr/m/n/10 (www[])?google.com([]br) re-torna www.google.com.br, www.google.
-com, go-o-gle.com
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
-
- []
-
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 240.
-
-("C:\Program Files\MKTex\tex\latex\base\omlcmr.fd"
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 240.
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
-
+Overfull \hbox (18.10358pt too wide) in paragraph at lines 242--247
+\T1/cmr/m/n/10 Tarefa: Re-pre-sen-tar atra-v�s de uma ER um nu-mero de CPF no f
+or-mato xxx.xxx.xxx-
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 256--262
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--275
+Underfull \hbox (badness 10000) in paragraph at lines 292--294
 
  []
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 282.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 280--282
+Underfull \hbox (badness 10000) in paragraph at lines 292--294
 
  []
 
-[8] (C:\Users\Felipe\EPA3\expressõesregulares.aux) ) 
+[8]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 297.
+
+ ("C:\Program Files\MKTex\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 297.
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--309
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--318
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--331
+
+ []
+
+
+LaTeX Warning: Empty `thebibliography' environment on input line 337.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
+
+ []
+
+[9] [10] (C:\Users\Felipe\EPA3\expressõesregulares.aux) ) 
 Here is how much of TeX's memory you used:
- 888 strings out of 494045
- 10048 string characters out of 3149995
- 65066 words of memory out of 3000000
- 4215 multiletter control sequences out of 15000+200000
+ 896 strings out of 494045
+ 10160 string characters out of 3149995
+ 64066 words of memory out of 3000000
+ 4223 multiletter control sequences out of 15000+200000
  13307 words of font info for 32 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 24i,7n,24p,804b,193s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Felipe\AppData\
-Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Feli
-pe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:
-\Users\Felipe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1
-000.pk> <C:\Users\Felipe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
-pi600\ecrm0900.pk> <C:\Users\Felipe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecbx0900.pk> <C:\Users\Felipe\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Felipe\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files/MKTex/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MKTex/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb>
-Output written on expressõesregulares.pdf (8 pages, 129688 bytes).
+ 24i,7n,24p,569b,205s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Felipe\App
+Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users
+\Felipe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+> <C:\Users\Felipe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecbx1000.pk> <C:\Users\Felipe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecrm0900.pk> <C:\Users\Felipe\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
+ur\jknappen\ec\dpi600\ecbx0900.pk> <C:\Users\Felipe\AppData\Local\MiKTeX\2.9\fo
+nts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Felipe\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk><C:/Program Files/MKTex
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MKTex/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb>
+Output written on expressõesregulares.pdf (10 pages, 140861 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
+ 372 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
